@@ -5,12 +5,73 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>About Us</title>
 
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!--CSS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!--CSS BOOTSTRAP-->
+
     <link rel="stylesheet" type="text/css" href="aboutus.css">
 </head>
 <body>
-    <div id="navbar">
-        <p>ini navbar</p>
-    </div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logooo.png" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About Us</div></a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="profile.html"><div class="fas fa-user" id="user-btn"></div></a>
+        </div>
+    
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here....">
+            <label for="search-box" class="fas fa-search"></label>
+        
+        </div>
+    
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/img-5.jpg" alt="">
+                <div class="barang">
+                    <h3>Keranjang Barang 1</h3>
+                    <div class="harga">Rp150.000/-</div>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/img-3.jpg" alt="">
+                <div class="barang">
+                    <h3>Keranjang Barang 2</h3>
+                    <div class="harga">Rp90.000/-</div>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/img-1.jpg" alt="">
+                <div class="barang">
+                    <h3>Keranjang Barang 3</h3>
+                    <div class="harga">Rp100.000/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Check Now</a>
+        </div>
+    
+    </header>
+
+
     
     <div id="topside">
         <h1>Toko Budaya</h1>
@@ -22,12 +83,11 @@
             <div class="box">
                 <span class="title">Who We Are</span>
                 <div>
-                    <p>note: bold dan rapiin<br>
-                        Selamat datang di Toko Budaya! Kami adalah tujuan utama Anda dalam 
-                        mengeksplorasi kerajinan dari berbagai penjuru Indonesia. Kami berkomitmen 
-                        dalam mempromosikan keragaman budaya. Kami hadir untuk mempertemukan Anda 
+                    <p>
+                        Tempat yang menjadi tujuan utama Anda dalam mengeksplorasi kerajinan dari berbagai penjuru Indonesia. Kami berkomitmen 
+                        dalam mempromosikan keragaman di Indonesia. <br><b>Kami hadir untuk mempertemukan Anda 
                         dengan barang-barang unik yang mencerminkan keindahan dan keunikan setiap budaya 
-                        di Indonesia.</p>
+                        di Indonesia.</b></p>
                 </div>
             </div>
         </div>
@@ -35,16 +95,16 @@
             <div class="box">
                 <span class="title">What We Do</span>
                 <div>
-                    <p>note: bold dan rapiin<br>
-                        Di Toko Budaya, misi kami adalah mendorong dan mendukung para pengrajin dan 
-                        pengusaha kreatif dari seluruh Indonesia. Kami percaya bahwa di balik setiap 
+                    <p>
+                        Mendorong dan mendukung para pengrajin dan 
+                        pengusaha kreatif dari seluruh Indonesia adalah salah satu misi kami. <br><b>Kami percaya bahwa di balik setiap 
                         produk kerajinan yang unik dan indah terdapat usaha, dedikasi, kreativitas yang 
-                        tak terhitung, serta makna yang tidak ternilai harganya.</p>
+                        tak terhitung, serta makna yang tidak ternilai harganya.</b></p>
                 </div>
             </div>
         </div>
     </div>
 
-
 </body>
+<script src="scripts.js"></script>
 </html>
