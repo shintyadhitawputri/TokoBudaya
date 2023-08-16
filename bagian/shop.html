@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopz</title>
+    <link rel="stylesheet" href="styleshop.css">
+</head>
+<body>
+    <!-- kategori -->
+    <div id="category">
+        <div class="dropdown">
+            <button class="drop" style="cursor: none; background-color: #512b2b; color: #ffffff; border-color: #ffffff;" onclick="toggleDropdown()">Categories</button>
+            <div class="dropdown-content">
+                <button onclick="categoryFilter('aksesoris')">Aksesoris</button>
+                <button onclick="categoryFilter('pakaianPria')">Pakaian Pria</button>
+                <button onclick="categoryFilter('pakaianWanita')">Pakaian Wanita</button>
+                <button onclick="categoryFilter('tas')">Tas</button>
+                <button onclick="categoryFilter('alasKaki')">Alas Kaki</button>
+                <button onclick="categoryFilter('hobi')">Hobi</button>
+                <button onclick="categoryFilter('perlengkapan')">Perlengkapan Rumah</button>
+                <button onclick="categoryFilter('souvenir')">Souvenir</button>
+                <button onclick="categoryFilter('kain')">Kain</button>
+                <button onclick="categoryFilter('ukiran')">Ukiran</button>
+                <button onclick="categoryFilter('alatMusik')">Alat Musik</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="filter">
+        <input type="number" id="lowPrice" placeholder="Minimal Harga">
+        <input type="number" id="highPrice" placeholder="Maksimal Harga">
+
+        <select id="location">
+            <option value="all">Semua Lokasi</option>
+            <option value="jawaTimur">Jawa Timur</option>
+            <option value="jawaTengah">Jawa Tengah</option>
+            <option value="kalimantanTimur">Kalimantan Timur</option>
+            <option value="kalimantanTengah">Kalimantan Tengah</option>
+            <!-- lokasi -->
+        </select>
+
+        <button onclick="applyFilters()">Terapkan</button>
+        <button onclick="resetFilter()">Reset</button>
+    </div>
+    <div id="root"></div>
+
+
+
+    <a href="halaman_lain.html">
+        <div id="template" style="display: none;">
+            <div class="box">
+                <h3>{title}</h3>
+                <div class="img-box">
+                    <img class="images" src={image}></img>
+                </div> 
+                <div class="bottom">
+                    <h3>Rp{price}</h3>
+                    <h2>{lokasi}</h2>
+                </div>
+            </div>
+        </div> 
+    </a>
+    
+</body>
+<script src="script.js"></script>
+</html>
