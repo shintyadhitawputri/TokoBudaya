@@ -1,11 +1,17 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['akun_id'])) {
+    header("location:login.php");
+    exit();
+}
 
 include "config.php";
 
+$akun_id = $_SESSION['akun_id'];
+
 /** QUERY DATA **/
-$query = mysqli_query($connection, "SELECT * FROM akun ORDER BY id DESC");
-
-
+$query = mysqli_query($connection, "SELECT * FROM akun WHERE id = '$akun_id' ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
