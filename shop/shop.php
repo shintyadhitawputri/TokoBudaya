@@ -18,8 +18,12 @@
         <div class="navbar">
             <img src="img/logo.png" alt="Logo">
                 <div class="icons">
-                    <div class="fas fa-user" id="user-btn"></div>
-                    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                    <a href="profile.php">
+                        <div class="fas fa-user" id="user-btn"></div>
+                    </a>
+                    <a href="cart.php">
+                        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                    </a>
                 </div>
                 <div class="navcenter">
                     <a href="home.php" class="buttonz">Home</a>
