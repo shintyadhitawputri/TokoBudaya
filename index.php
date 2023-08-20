@@ -148,7 +148,7 @@
         <h1 class="head">Rekomendasi <span> Barang</span></h1>
         <div class="box-container"> 
             <?php
-                include ('connection.php');
+                include ('connect.php');
                 
                 $query = "SELECT * FROM produk ORDER BY RAND() LIMIT 3";
                 $multiprdk =query($query);
