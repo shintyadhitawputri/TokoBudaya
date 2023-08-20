@@ -377,3 +377,14 @@ body {
     box-shadow: 0px 0px 20px 1px #5f4b363f;
     border: 1px solid rgba(255, 255, 255, 0.454);
   }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      background-color: rgba(39, 36, 32, 1);
+      padding: 0.7rem;
+      margin-top: 1.5%;
+      color: white;
+      bottom: 0px;
+      position: relative;
+    }
