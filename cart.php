@@ -1,5 +1,13 @@
 <?php
+// session_start();
 include('connection.php');
+
+if (isset($_POST["checkout"])) {
+    var_dump($_POST);
+    die;
+    $_SESSION["quantity"] = $_POST["quantity"];
+    header("location: checkout.php");
+}
 
 if (isset($_POST["add_to_cart"])) {
     // var_dump($_POST);die;
@@ -51,16 +59,18 @@ if (isset($_POST['quantity'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!--Eksternal CSS-->
     <link rel="stylesheet" href="shopcart.css" />
 
     <!-- Fonts From Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -70,18 +80,24 @@ if (isset($_POST['quantity'])) {
     <header>
         <img src="img/logo TB.png" height="100" width="100" />
 
-        <div class="nav-cen">
-            <input type="text" placeholder=" Cari barang" />
 
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#about">About Us</a></li>
-                </ul>
-            </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home"><button type="button" class="btn btn-warning">Home</button></a></li>
+                <li><a href="#shop"><button type="button" class="btn btn-warning">Shop</button></a></li>
+                <li><a href="#about"><button type="button" class="btn btn-warning">About Us</button></a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="user-btn"></div>
         </div>
-        <a href="#" id="hamburger-menu"><i data-feather="user"></i></a>
+
+
+
+
     </header>
 
     <main>
@@ -90,7 +106,7 @@ if (isset($_POST['quantity'])) {
                 <h2>KERANJANG ANDA</h2>
             </div>
             <div class="produk">
-                <table>
+                <table class="cart">
                     <tr>
                         <th>‎</th>
                         <th>Produk</th>
@@ -100,8 +116,8 @@ if (isset($_POST['quantity'])) {
                     </tr>
                     <?php
                     $total = 0;
-                    foreach ($multiprdk as $prdk):
-                        ?>
+                    foreach ($multiprdk as $prdk) :
+                    ?>
 
                         <tr>
                             <td colspan="4">
@@ -112,8 +128,7 @@ if (isset($_POST['quantity'])) {
 
                         <tr>
                             <td>
-                                <div class="cancel"><a href="hapus.php?id=<?php echo $prdk['id']; ?>"><i
-                                            data-feather="x-circle"></i></a>
+                                <div class="cancel"><a href="hapus.php?id=<?php echo $prdk['id']; ?>"><i data-feather="x-circle"></i></a>
                                 </div>
                             </td>
                             <td>
@@ -148,45 +163,38 @@ if (isset($_POST['quantity'])) {
                                 </span>
                             </td>
                         </tr>
-                        <?php
+                    <?php
                         $total += $sub_total;
                     endforeach;
                     ?>
                 </table>
                 <div class="cart-total">
-                    <table>
+                    <table class="total">
                         <tr>
                             <td>
                                 Total
                             </td>
                             <td>
-                                Rp.
+                                Rp
                                 <?php
                                 echo $total;
                                 ?>
                             </td>
                         </tr>
-                    </table>
-                </div>
-                <div class="voucher">
-                    <table>
                         <tr>
-                            <td>
-                                <input type="text" placeholder="Masukkan voucher Anda">
+
+                            <td colspan="2">
+                                <div class="checkout">
+                                    <form action="checkout.php" method="post">
+                                        <button name="checkout_cart"><strong>Checkout</strong></button>
+                                    </form>
+                                </div>
                             </td>
-                            <td>
-                                <button>Apply</button>
-                            </td>
+
+
                         </tr>
                     </table>
                 </div>
-
-                <div class="checkout">
-                    <form>
-                        <button name="checkout"><strong>Checkout</strong></button>
-                    </form>
-                </div>
-
             </div>
         </section>
     </main>
