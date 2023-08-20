@@ -4,74 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png"/>
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!--CSS BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!--CSS BOOTSTRAP-->
 
     <link rel="stylesheet" type="text/css" href="aboutus.css">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo">
-            <img src="images/logooo.png" alt="">
-        </a>
-    
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About Us</div></a>
-        </nav>
-    
-        <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
-            <a href="profile.html"><div class="fas fa-user" id="user-btn"></div></a>
-        </div>
-    
-        <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here....">
-            <label for="search-box" class="fas fa-search"></label>
-        
-        </div>
-    
-        <div class="cart-items-container">
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="images/img-5.jpg" alt="">
-                <div class="barang">
-                    <h3>Keranjang Barang 1</h3>
-                    <div class="harga">Rp150.000/-</div>
-                </div>
+    <div class="navbar">
+        <img src="img/logo.png" alt="Logo">
+            <div class="icons">
+                <a href="profile.php">
+                    <div class="fas fa-user" id="user-btn"></div>
+                </a>
+                <a href="cart.php">
+                    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                </a>
             </div>
-    
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="images/img-3.jpg" alt="">
-                <div class="barang">
-                    <h3>Keranjang Barang 2</h3>
-                    <div class="harga">Rp90.000/-</div>
-                </div>
+            <div class="navcenter">
+                <a href="home.php" class="buttonz">Home</a>
+                <a href="shop.php" class="buttonz">Shop</a>
+                <a href="aboutus.html" class="buttonz">About Us</a>
             </div>
-    
-            <div class="cart-item">
-                <span class="fas fa-times"></span>
-                <img src="images/img-1.jpg" alt="">
-                <div class="barang">
-                    <h3>Keranjang Barang 3</h3>
-                    <div class="harga">Rp100.000/-</div>
-                </div>
-            </div>
-            <a href="#" class="btn">Check Now</a>
-        </div>
-    
-    </header>
-
-
+            
+            <form class="searchform" action="search.php" method="post">
+                <input class="inputsearch" type="text" name="keyword" id="keyword" autofocus placeholder="Cari produk Anda" autocomplete="off">
+                <button class="submitsearch" type="submit" name="cari" id="search-button">Cari</button>
+            </form>
+    </div>
     
     <div id="topside">
         <h1>Toko Budaya</h1>
