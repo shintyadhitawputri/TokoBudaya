@@ -4,7 +4,7 @@ include 'connection.php';
 if (isset($_GET['id'])) {
   $id = $_GET["id"];
 }
-$sql = "SELECT* FROM produk where id = 1";
+$sql = "SELECT* FROM produk where id = $id";
 $query = mysqli_query($koneksi, $sql);
 
 $prdk = mysqli_fetch_assoc($query);
