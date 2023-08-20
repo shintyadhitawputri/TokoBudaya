@@ -18,9 +18,30 @@ header {
   padding: 0.1rem 7%;
 }
 
-.navbar ul {
-  display: flex; /*agar sejajar*/
-  list-style-type: none; /*menghilangkan bullet*/
+.navbar ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none; 
+  gap: 0rem 2rem;
+  
+}
+
+.navbar ul li a button{
+  color: white;
+}
+
+.icons{
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+.icons:hover{
+  color:rgba(39, 36, 32, 1) ;
+}
+/* .navbar ul {
+  display: flex; agar sejajar
+  list-style-type: none; menghilangkan bullet
   gap: 0rem 4rem;
   justify-content: center;
   font-size: 77%;
@@ -37,7 +58,7 @@ header {
   background-color: rgba(251, 187, 23, 1);
   padding: 0.2rem;
   border-radius: 8%;
-}
+} */
 
 footer {
   width: 100%;
@@ -49,6 +70,7 @@ footer {
   bottom: 0px;
   position: relative;
 }
+
 
 .carousel {
   width: 60%;
