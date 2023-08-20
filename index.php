@@ -1,13 +1,10 @@
-<?php 
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Toko Budaya</title>
+    <link rel="icon" type="image/x-icon" href="images/logooo.png"/>
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -145,142 +142,44 @@
 <!-- why us section ends -->
 
 <!-- rekomendasi barang starts -->
+
 <section class="products" id="products">
     <div class="box">
         <h1 class="head">Rekomendasi <span> Barang</span></h1>
+        <div class="box-container"> 
+            <?php
+                include ('connection.php');
+                
+                $query = "SELECT * FROM produk ORDER BY RAND() LIMIT 3";
+                $multiprdk =query($query);
 
-        <div class="box-container">
-    
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-9.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="harga">Rp70.000 <span>Rp90.000</span></div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-5.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="harga">Rp100.000 <span>Rp150.000</span></div>
-                </div>
-            </div>
+                foreach ($multiprdk as $prdk) { ?>
+                    
+                        <div class="box">
+                            <div class="icons">
+                            <div class="fas fa-shopping-cart"></div>
+                            <div class="fas fa-heart"></div>
+                            <a href="product.php?id=<?php echo $prdk['id'] ?>"><div class="fas fa-eye"></div> </a>
+                            </div>
 
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-1.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="harga">Rp100.000 <span>Rp150.000</span></div>
-                </div>
-            </div>
+                            <div class="image">
+                                <img src="img/<?php echo $prdk["img"]; ?>" alt="">
+                            </div> 
 
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-9.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="harga">Rp70.000 <span>Rp90.000</span></div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-5.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="harga">Rp100.000 <span>Rp150.000</span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <div class="fas fa-shopping-cart"></div>
-                    <div class="fas fa-heart"></div>
-                    <div class="fas fa-eye"></div>
-                </div>
-                <div class="image">
-                    <img src="images/img-1.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>Keranjang Rotan</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="harga">Rp100.000 <span>Rp150.000</span></div>
-                </div>
-            </div>
-    
+                            <div class="content">
+                                <h3><?php echo $prdk["nama"]; ?></h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="harga"><h2>Rp<?php echo $prdk["harga"]; ?></h2></div>
+                            </div>
+                        </div>
+                  
+                    <?php } ?>
         </div>
     </div>
 </section>
@@ -299,4 +198,5 @@
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
