@@ -121,6 +121,7 @@ $(document).ready(function() {
 });
 </script>
 </body>
-<footer>
-</footer>
+    <footer>
+        <p>Created by<strong> IP3</strong></a>. | &copy; 2023.</p>
+    </footer>
 </html>
