@@ -3,14 +3,11 @@
 include 'connection.php';
 if (isset($_GET['id'])) {
   $id = $_GET["id"];
-  $sql = "SELECT* FROM produk where id = $id";
-  $query = mysqli_query($koneksi, $sql);
-
-  $prdk = mysqli_fetch_assoc($query);
-} else {
-  header('Location : shop.php');
 }
+$sql = "SELECT* FROM produk where id = 1";
+$query = mysqli_query($koneksi, $sql);
 
+$prdk = mysqli_fetch_assoc($query);
 
 ?>
 <!DOCTYPE html>
@@ -24,8 +21,7 @@ if (isset($_GET['id'])) {
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!--Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
   <!--Eksternal CSS-->
   <link rel="stylesheet" href="product.css" />
@@ -33,9 +29,7 @@ if (isset($_GET['id'])) {
   <!-- Fonts From Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -46,29 +40,33 @@ if (isset($_GET['id'])) {
   <header>
     <img src="img/logo TB.png" height="100" width="100" />
 
-    <div class="nav-cen">
-      <input type="text" placeholder=" Cari barang" />
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
-      </nav>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home"><button type="button" class="btn btn-warning">Home</button></a></li>
+        <li><a href="#shop"><button type="button" class="btn btn-warning">Shop</button></a></li>
+        <li><a href="#about"><button type="button" class="btn btn-warning">About Us</button></a></li>
+      </ul>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-user" id="user-btn"></div>
     </div>
 
-    <a href="#" id="hamburger-menu"><i data-feather="user"></i></a>
+
+
+
   </header>
+
 
   <main>
     <!--Carausel Image-->
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -111,7 +109,7 @@ if (isset($_GET['id'])) {
         </p>
       </div>
       <form action="cart.php" method="post">
-        <input type="hidden" value="<?php echo $_GET['id'] ?>" name="id">
+        <input type="hidden" value="1" name="id">
         <input type="hidden" value="<?php echo $prdk['nama'] ?>" name="nama">
         <input type="hidden" value="<?php echo $prdk['img1'] ?>" name="img1">
         <input type="hidden" value="<?php echo $prdk['harga'] ?>" name="harga">
@@ -124,27 +122,24 @@ if (isset($_GET['id'])) {
 
 
         <button name="add_to_cart"><strong>Add to Cart</strong></button>
-        <a href="">
-          <button name="checkout" style="background-color: rgb(191, 126, 40);"><strong>Checkout</strong></button></a>
+
       </form>
     </div>
   </main>
 
-  <footer>
+  <!-- <footer>
     <p>
       Created by
       <strong>IP3</strong></a>. | &copy; 2023.
     </p>
-  </footer>
+  </footer> -->
 
   <!-- Feather Icons -->
   <script>
     feather.replace();
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </body>
 
