@@ -145,6 +145,9 @@ $multiprdk = mysqli_query($koneksi, $sql);
                 <section>
 
 
+<footer>
+        <p>Created by<strong> IP3</strong></a>. | &copy; 2023.</p>
+    </footer>
 
     </main>
 
