@@ -30,6 +30,18 @@ header {
   color: white;
 }
 
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(39, 36, 32, 1);
+  padding: 0.7rem;
+  margin-top: 1.5%;
+  color: white;
+  bottom: 0px;
+  position: relative;
+}
+
+
 .icons{
   color: #fff;
   cursor: pointer;
