@@ -2,12 +2,6 @@
 // session_start();
 include('connection.php');
 
-if (isset($_POST["checkout"])) {
-    var_dump($_POST);
-    die;
-    $_SESSION["quantity"] = $_POST["quantity"];
-    header("location: checkout.php");
-}
 
 if (isset($_POST["add_to_cart"])) {
     // var_dump($_POST);die;
@@ -59,6 +53,7 @@ if (isset($_POST['quantity'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png"/>
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Bootstrap-->
@@ -78,14 +73,14 @@ if (isset($_POST['quantity'])) {
 
 <body>
     <header>
-        <img src="img/logo TB.png" height="100" width="100" />
+        <img src="img/logo.png" height="100" width="100" />
 
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home"><button type="button" class="btn btn-warning">Home</button></a></li>
-                <li><a href="#shop"><button type="button" class="btn btn-warning">Shop</button></a></li>
-                <li><a href="#about"><button type="button" class="btn btn-warning">About Us</button></a></li>
+                <li><a href="index.php"><button type="button" class="btn btn-warning">Home</button></a></li>
+                <li><a href="shop.php"><button type="button" class="btn btn-warning">Shop</button></a></li>
+                <li><a href="aboutus.html"><button type="button" class="btn btn-warning">About Us</button></a></li>
             </ul>
         </nav>
 
@@ -149,7 +144,7 @@ if (isset($_POST['quantity'])) {
                             <td>
                                 <form method="post" action="cart.php">
                                     <input type="hidden" value="<?php echo $prdk['id']; ?>" name="id">
-                                    <input type="number" name="product_quantity" value="<?php echo $prdk['quantity']; ?>">
+                                    <input class="but-inc" type="number" name="product_quantity" value="<?php echo $prdk['quantity']; ?>">
                                     <input type="submit" class="edit" value="edit" name="quantity">
                                 </form>
                             </td>
