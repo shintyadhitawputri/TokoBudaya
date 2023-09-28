@@ -8,57 +8,26 @@
   text-decoration: none; /*agar link tidak disertakan garis bawah*/
   font-family: Poppins;
 }
-
 header {
   background-color: rgba(39, 36, 32, 1);
   display: flex; /*agar sejajar*/
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-  padding: 0.1rem 7%;
 }
 
-.navbar ul{
+.navbar ul {
   display: flex;
   justify-content: center;
-  list-style-type: none; 
+  list-style-type: none;
   gap: 0rem 2rem;
-  
+  margin-top: 5%;
 }
 
-.navbar ul li a button{
-  color: white;
-}
-
-.icons{
-  color: #fff;
-  cursor: pointer;
-  font-size: 2.5rem;
-  margin-left: 2rem;
-}
-.icons:hover{
-  color:rgba(39, 36, 32, 1) ;
-}
-/* .navbar ul {
-  display: flex; agar sejajar
-  list-style-type: none; menghilangkan bullet
-  gap: 0rem 4rem;
-  justify-content: center;
-  font-size: 77%;
-}
-
-.nav-cen input {
-  height: 30px;
-  width: 500px;
-  margin-bottom: 3%;
-}
-
-.navbar ul li a {
+.navbar ul li a button {
   color: black;
-  background-color: rgba(251, 187, 23, 1);
-  padding: 0.2rem;
-  border-radius: 8%;
-} */
+  font-size: small;
+}
 
 footer {
   width: 100%;
@@ -69,6 +38,18 @@ footer {
   color: white;
   bottom: 0px;
   position: relative;
+}
+
+.icons {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+#search-btn:hover,
+#cart-btn:hover,
+#user-btn:hover {
+  color: rgb(187, 120, 33);
 }
 
 
