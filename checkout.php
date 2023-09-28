@@ -17,6 +17,7 @@ $multiprdk = mysqli_query($koneksi, $sql);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png"/>
 
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -37,14 +38,14 @@ $multiprdk = mysqli_query($koneksi, $sql);
 
 <body>
     <header>
-        <img src="img/logo TB.png" height="100" width="100" />
+        <img src="img/logo.png" height="100" width="100" />
 
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home"><button type="button" class="btn btn-warning">Home</button></a></li>
-                <li><a href="#shop"><button type="button" class="btn btn-warning">Shop</button></a></li>
-                <li><a href="#about"><button type="button" class="btn btn-warning">About Us</button></a></li>
+                <li><a href="home.php"><button type="button" class="btn btn-warning">Home</button></a></li>
+                <li><a href="shop.php"><button type="button" class="btn btn-warning">Shop</button></a></li>
+                <li><a href="aboutus.html"><button type="button" class="btn btn-warning">About Us</button></a></li>
             </ul>
         </nav>
 
@@ -54,17 +55,14 @@ $multiprdk = mysqli_query($koneksi, $sql);
             <div class="fas fa-user" id="user-btn"></div>
         </div>
 
-
-
-
     </header>
     <main>
         <section>
             <?php $total = 0; ?>
             <?php foreach ($multiprdk as $prdk) : ?>
 
-                <div class="desk">
-                    <div class="produk">
+               
+                    <div class="produk"> 
                         <table>
                             <tr>
                                 <td>
@@ -97,51 +95,54 @@ $multiprdk = mysqli_query($koneksi, $sql);
 
                             ?>
                         </table>
-                    </div>
+                    </div> 
                 <?php endforeach; ?>
-                <div class="cart-total">
+                <div class="cart-total"> 
                     <table>
                         <tr>
                             <td>
                                 Total
                             </td>
                             <td>
-                                Rp.
+                                Rp
                                 <?php
                                 echo $total;
                                 ?>
                             </td>
                         </tr>
                     </table>
-                </div>
-                <div class="tf">
+                 </div>
+
+               
 
                     <div class="no">
-                        <p>No Virtual Account</p>
-                        <h3>56236236 535</h3>
+                        <p>No Virtual Account<br>
+                        <span>56236236 535</span></p>
                     </div>
                     <div class="tutor">
                         <p> Petunjuk Pembayaran</p>
+                        <div class="step">
                         <ol>
                             <li>
                                 Pilih transfer->Virtual Account
                             </li>
                             <li>
-                                Pilih transfer->Virtual Account
+                                Pilih rekening Anda->Masukkan nomor Virtual Account pada menu input baru.
                             </li>
                             <li>
-                                Pilih transfer->Virtual Account
+                                Tagihan yang harus dibayar akan muncul pada layar konfirmasi.
                             </li>
                             <li>
-                                Pilih transfer->Virtual Account
+                                Periksa informasi yang tertera pada layar.
                             </li>
                         </ol>
                     </div>
-                </div>
+                    </div>
+               
 
 
 
-                </div>
+                
                 <section>
 
 
