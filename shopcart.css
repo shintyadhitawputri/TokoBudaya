@@ -9,45 +9,40 @@
   font-family: Poppins;
 }
 
+
 header {
   background-color: rgba(39, 36, 32, 1);
   display: flex; /*agar sejajar*/
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-  padding: 0.1rem 7%;
 }
 
-.navbar ul{
+.navbar ul {
   display: flex;
   justify-content: center;
-  list-style-type: none; 
+  list-style-type: none;
   gap: 0rem 2rem;
-  
+  margin-top: 5%;
 }
 
-.navbar ul li a button{
-  color: white;
-}
-footer {
-  width: 100%;
-  text-align: center;
-  background-color: rgba(39, 36, 32, 1);
-  padding: 0.7rem;
-  margin-top: 1.5%;
-  color: white;
-  bottom: 0px;
-  position: relative;
+.navbar ul li a button {
+  color: black;
+  font-size: small;
 }
 
-.icons{
+
+
+.icons {
   color: #fff;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-left: 2rem;
 }
-.icons:hover{
-  color:rgba(39, 36, 32, 1) ;
+#search-btn:hover,
+#cart-btn:hover,
+#user-btn:hover {
+  color: rgb(187, 120, 33);
 }
 
 /*SHOP CART MAIN*/
@@ -145,4 +140,15 @@ th:last-child {
   justify-content:
   center ;
   display: flex;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(39, 36, 32, 1);
+  padding: 0.7rem;
+  margin-top: 1.5%;
+  color: white;
+  bottom: 0;
+  position: absolute;
 }
