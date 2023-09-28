@@ -16,7 +16,7 @@ $prdk = mysqli_fetch_assoc($query);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>single product </title>
+  <title>Product </title>
 
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -38,14 +38,14 @@ $prdk = mysqli_fetch_assoc($query);
 
 <body>
   <header>
-    <img src="img/logo TB.png" height="100" width="100" />
+    <img src="img/logo.png" height="100" width="100" />
 
 
     <nav class="navbar">
       <ul>
-        <li><a href="#home"><button type="button" class="btn btn-warning">Home</button></a></li>
-        <li><a href="#shop"><button type="button" class="btn btn-warning">Shop</button></a></li>
-        <li><a href="#about"><button type="button" class="btn btn-warning">About Us</button></a></li>
+        <li><a href="index.php"><button type="button" class="btn btn-warning">Home</button></a></li>
+        <li><a href="shop.php"><button type="button" class="btn btn-warning">Shop</button></a></li>
+        <li><a href="aboutus.html"><button type="button" class="btn btn-warning">About Us</button></a></li>
       </ul>
     </nav>
 
@@ -73,7 +73,7 @@ $prdk = mysqli_fetch_assoc($query);
           <img src="img/<?php echo $prdk["img1"]; ?>" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/tas2.jpg" class="d-block w-100" alt="...">
+          <img src="img/<?php echo $prdk["img2"]; ?>" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -127,12 +127,12 @@ $prdk = mysqli_fetch_assoc($query);
     </div>
   </main>
 
-  <!-- <footer>
+   <footer>
     <p>
       Created by
       <strong>IP3</strong></a>. | &copy; 2023.
     </p>
-  </footer> -->
+  </footer>
 
   <!-- Feather Icons -->
   <script>
