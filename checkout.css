@@ -15,19 +15,19 @@ header {
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-  padding: 0.1rem 7%;
 }
 
-.navbar ul{
+.navbar ul {
   display: flex;
   justify-content: center;
-  list-style-type: none; 
+  list-style-type: none;
   gap: 0rem 2rem;
-  
+  margin-top: 5%;
 }
 
-.navbar ul li a button{
-  color: white;
+.navbar ul li a button {
+  color: black;
+  font-size: small;
 }
 
 footer {
@@ -41,179 +41,75 @@ footer {
   position: relative;
 }
 
-
-.icons{
+.icons {
   color: #fff;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-left: 2rem;
 }
-.icons:hover{
-  color:rgba(39, 36, 32, 1) ;
+#search-btn:hover,
+#cart-btn:hover,
+#user-btn:hover {
+  color: rgb(187, 120, 33);
 }
-.produk table {
- 
- width: 40%;
- border: 0.7px solid;
+table {
+  width: 40%;
+  border: 0.7px solid;
 }
 
 .produk {
-justify-content: left;
-margin-left: 11%;
-
-}
-
-section{
-  margin-top: 4%;
-  margin-left: 4%
-}
-
-
-
-tr {
-  border: 1.7px solid rgba(139, 134, 134, 0.4);
-  background-color: rgb(244, 248, 252);
-}
-td{
-  padding: 10px 20px;
-}
-.produk {
-  align-items: center;
-}
-
-.nama_produk {
-  margin-left: 2%;
-}
-
-.tf{
-  position: relative;
-  margin-top: -15.5%;
-  margin-left: 60%;
-  background-color: rgb(244, 248, 252);
-  padding: 2% 0% 2% 4%;
-  width:25% ;
-
-}
-
-.no p,.tutor p{
-  color: rgb(88, 57, 16);
-  font-weight: 700;
-}
-
-.tutor{
-  margin-top: 2%;
-}
-
-
-
-
-
-
-
-.cart-total {
-  display: flex;
-  
-  justify-content: left;
-  margin-left: 27.5%
-}
-
-.cart-total table {
-  border: 1px solid rgba(39, 36, 32, 1);
-  width: 80%;
-  max-width: 250px;
-}
-
-td:last-child,
-th:last-child {
-  text-align: right;
-} 
-
-
-
-/*SHOP CART MAIN*/
-/* 
-h2 {
-  text-align: center;
-  margin-top: 3%;
-}
-
-
-
-.produk {
-  margin: 80px;
-  margin-top: 3%;
-  justify-content: left;
-  display: flex;
-  background-color: aqua;
-}
-
-
-
-
-th {
-  text-align: left;
-  padding: 5px 10px;
-  background-color: white;
-  color: black;
-  font-weight: 400;
-  font-size: small;
-}
-
-td,
-th {
-  padding: 10px 20px;
-}
-
-.cancel {
   justify-content: center;
-}
-
-.cancel {
-  cursor: pointer;
-}
-.produk {
-  align-items: center;
-}
-
-.nama_produk {
-  margin-left: 2%;
-}
-
-.edit {
-  width: 20%;
-  border: 1px solid rgb(0, 0, 0, 0.2);
-  padding: 2%;
-}
-
-button {
-  margin-top: 1.5%;
-  padding: 4px 8px;
-  background-color: rgb(88, 57, 16);
-  border-radius: 5%;
-  border: solid 1.8px rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  letter-spacing: 2px;
-  font-weight: 300;
-}
-
-.checkout {
-  margin-right: 5%;
+  margin-top: 2%;
   display: flex;
-  justify-content: flex-end;
 }
+
 .cart-total {
+  justify-content: center;
   display: flex;
-  justify-content: flex-end;
-  margin: 0px;
 }
 
-.cart-total table {
-  border-top: 2px solid rgba(39, 36, 32, 1);
-  width: 100%;
-  max-width: 250px;
+td {
+  padding: 10px 20px;
 }
-
-td:last-child,
-th:last-child {
+td:last-child {
   text-align: right;
-} */
+}
+
+.no {
+  text-align: center;
+  background-color: rgb(247, 205, 98);
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 3%;
+  outline: #864444;
+}
+
+.no p {
+  font-weight: 600;
+  padding: 2% 0%;
+}
+
+.no span {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.tutor {
+  background-color: rgb(247, 205, 98);
+  width: 30%;
+  margin: 0 auto;
+}
+
+.tutor p {
+  text-align: center;
+  font-weight: 600;
+  padding-top: 2%;
+  margin-bottom: 1%;
+}
+
+.step {
+  margin: 0 auto;
+  padding-left: 2.5%;
+  padding-right: 1%;
+  padding-bottom: 2%;
+}
